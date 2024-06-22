@@ -38,8 +38,17 @@ class _WebViewAppState extends State<WebViewApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-       title: const Text('Direct Packaging Solution'),
-
+        title: Row(
+          children: [
+            Image.asset(
+              'assets/icon/icon.png',
+              height: 24, // Adjust the height as needed
+              width: 24,  // Adjust the width as needed
+            ),
+            SizedBox(width: 8), // Add some space between the icon and the text
+            const Text('Direct Packaging & Solutions'),
+          ],
+        ),
       ),
       body: WebViewStack(controller: controller),
     );
